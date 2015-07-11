@@ -1,6 +1,6 @@
 <?php
 $hostname ="localhost";
-$database ="mydb";
+$database ="schoolSelection";
 $username ="root";
 $password ="code4good";
 $localhost = @mysql_connect($hostname,$username,$password)
@@ -23,7 +23,7 @@ $rows = mysql_num_rows($query_exec);
 	$query_exec=mysql_fetch_array($query_exec);
 	$name=$query_exec["username"];
 	$type=$query_exec["type"];
-	if($type == "partner")
+	if($type == "Partner")
 	{
 		header('Location:partnerHome.html');
 	}
