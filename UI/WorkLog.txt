@@ -1,0 +1,4 @@
+1. Home page with about company which links to login and registration 
+2.Contact me and Message 
+3. Registration Front  End Form 
+4. Login form with Validation
