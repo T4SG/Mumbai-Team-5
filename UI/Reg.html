@@ -43,15 +43,17 @@ $(document).ready(function() {
     </div>
 
     <div class="content">
-	<input name="username" type="text" class="input username" value="Username" onfocus="this.value=''" />
-	<input name="email" type="text" class="input username" value="email" onfocus="this.value=''" />
+	<input name="username" type="text" class="input password" value="Username" onfocus="this.value=''" />
+	
+	<input name="email" type="text" class="input password" value="Email" onfocus="this.value=''" />
 	<input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" />
     <input name="reconfirm" type="password" class="input password" value="Password" onfocus="this.value=''" />
-	<select name="role" class="input password">
-	<option>Partner</option>
-	<option>Consultant</option>
-    <option>Onsite Manager</option>
-	<option>Citizen</option>
+	<hr/>
+	<select name="role" style="width: 188px; padding: 15px 25px;" >
+	<option value="Partner">Partner</option>
+	<option value="Consultant">Consultant</option>
+    <option value="Onsite Manager">Onsite Manager</option>
+	<option value="Citizen">Citizen</option>
 	</select>
     </div>
 
