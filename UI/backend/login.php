@@ -8,10 +8,10 @@ or
 trigger_error(mysql_error(),E_USER_ERROR);
 mysql_select_db($database, $localhost);
 
-$userid = $_POST['userId'];
+$userid = $_POST['username'];
 $password = $_POST['password'];
 
-$query_search = "select * from user where userId = '".$userid."' AND password = '".$password. "'";
+$query_search = "select * from user where username = '".$userid."' AND password = '".$password. "'";
 $query_exec = mysql_query($query_search) or die(mysql_error());
 $rows = mysql_num_rows($query_exec);
 
@@ -25,7 +25,7 @@ $rows = mysql_num_rows($query_exec);
 	$type=$query_exec["type"];
 	if($type == "Partner")
 	{
-		header('Location:partnerHome.html');
+		header('Location: partnerHome.html');
 	}
     echo array($name,$type); 
 }
