@@ -27,6 +27,14 @@ $rows = mysql_num_rows($query_exec);
 	{
 		header('Location: partnerHome.html');
 	}
+	else if($type == "Consultant")
+	{
+		header('Location: consultantHome.html');
+	}
+	else if($type == "Others")
+	{
+		header('Location: othersHome.html');
+	}
     echo array($name,$type); 
 }
 ?>
