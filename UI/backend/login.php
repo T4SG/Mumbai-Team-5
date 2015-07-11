@@ -23,6 +23,10 @@ $rows = mysql_num_rows($query_exec);
 	$query_exec=mysql_fetch_array($query_exec);
 	$name=$query_exec["username"];
 	$type=$query_exec["type"];
+	if($type == "partner")
+	{
+		header('Location:partnerHome.html');
+	}
     echo array($name,$type); 
 }
 ?>
