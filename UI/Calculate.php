@@ -39,20 +39,27 @@ $rows = mysql_num_rows($query_exec);
  else  
  {
 	 $i=1;
+	 $b =1;
 	while ($row=mysql_fetch_row($query_exec))
     {
 		if($i==14)
 		{
 			$i=1;
+			$b = $b+1;
 		}
 		if($i == $x)
 		{
-			$ans[$]
+			$ans[$b] = $ans[$b]+ $row[3]*2*$row[2];
 		}
-		$ans[]
+		else
+		{
+			$ans[$b] = $ans[$b]+ $row[3]*$row[2];
+		}
 		$i = $i+1;
     }
 	mysql_free_result($result);
+	echo $ans;
+	echo max($ans);
 }
 
 
