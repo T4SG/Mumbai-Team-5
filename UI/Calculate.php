@@ -7,14 +7,13 @@ $localhost = @mysql_connect($hostname,$username,$password)
 or
 trigger_error(mysql_error(),E_USER_ERROR);
 mysql_select_db($database, $localhost);
-
+echo 'Hello';
 $ans = array();
 
 $query_search = "select * from solution";
 $query_exec = mysql_query($query_search) or die(mysql_error());
 $rows = mysql_num_rows($query_exec);
 
-echo $rows;
 echo "Hello";
 print_r($ans);
  if($rows == 0) { 
@@ -36,6 +35,5 @@ print_r($ans);
 	echo "Hello Hello";
 	echo max($ans);
 }
-
 
 ?>
