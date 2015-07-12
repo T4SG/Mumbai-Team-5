@@ -25,15 +25,15 @@ $rows = mysql_num_rows($query_exec);
 	$type=$query_exec["type"];
 	if($type == "Partner")
 	{
-		header('Location: partnerHome.html');
+		header('Location: ../UI/partnerHome.html');
 	}
 	else if($type == "Consultant")
 	{
-		header('Location: consultantHome.html');
+		header('Location: ../UI/consultantHome.html');
 	}
 	else if($type == "Others")
 	{
-		header('Location: othersHome.html');
+		header('Location: ../UI/othersHome.html');
 	}
     echo array($name,$type); 
 }
