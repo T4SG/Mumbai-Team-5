@@ -9,8 +9,8 @@ trigger_error(mysql_error(),E_USER_ERROR);
 mysql_select_db($database, $localhost);
 $criteria = $_POST['criteria'];
 $ans = array();
-
-$query_search = "select * from solution";
+$criteria = 1;
+$query_search = "select  from solution sln,school s where sln.sid=s.sid ";
 $query_exec = mysql_query($query_search) or die(mysql_error());
 $rows = mysql_num_rows($query_exec);
 
