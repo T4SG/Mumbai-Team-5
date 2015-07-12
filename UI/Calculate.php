@@ -6,8 +6,8 @@ $password ="code4good";
 $localhost = @mysql_connect($hostname,$username,$password)
 or
 trigger_error(mysql_error(),E_USER_ERROR);
-mysql_select_db($database, $localhost);
-$criteria = $_POST['criteria'];
+mysql_select_db($database,$localhost);
+echo 'Hello';
 $ans = array();
 
 $query_search = "select * from solution";
@@ -19,10 +19,9 @@ print_r($ans);
  if($rows == 0) { 
  echo "No Data"; 
  }
-
  else  
  {
-	  $b = 0;
+	 $b = 0;
 	while ($row=mysql_fetch_row($query_exec))
     {
 		for($i=4;$i<=18;$i++)
